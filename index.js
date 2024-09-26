@@ -48,12 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (isEditing) {
-            // Update the current entry being edited
             entries[currentEditIndex] = { description, amount, type };
             isEditing = false;
             addBtn.textContent = 'Add Entry';
         } else {
-            // Add a new entry
             entries.push({ description, amount, type });
         }
 
@@ -61,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
         displayEntries();
         updateTotals();
 
-        // Clear input fields after adding/updating
         descriptionInput.value = '';
         amountInput.value = '';
     };
